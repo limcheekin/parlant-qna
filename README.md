@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="Parlant Logo" src="https://github.com/emcie-co/parlant/blob/0aba0fae493fb97593d1553392c86476d1cc45e4/banner.png" />
+<img alt="Parlant Logo" src="https://github.com/emcie-co/parlant-qna/blob/0aba0fae493fb97593d1553392c86476d1cc45e4/banner.png" />
   <h2>Parlant: A behavioral control system for customer-facing LLM agents </h2>
   <p>
     <a href="https://www.parlant.io/" target="_blank">Website</a> |
