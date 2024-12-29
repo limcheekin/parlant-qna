@@ -1,6 +1,6 @@
 <div align="center">
 <img alt="Parlant Logo" src="https://github.com/emcie-co/parlant-qna/blob/0aba0fae493fb97593d1553392c86476d1cc45e4/banner.png" />
-  <h2>Parlant: A behavioral control system for customer-facing LLM agents </h2>
+  <h2>Parlant Q&A: A Questions/Answers Tool Service for Parlant</h2>
   <p>
     <a href="https://www.parlant.io/" target="_blank">Website</a> |
     <a href="https://www.parlant.io/docs/quickstart/introduction" target="_blank">Introduction</a> |
@@ -17,8 +17,6 @@
 </a>
   </p>
 </div>
-
-## Parlant Q&A: A Questions/Answers Tool Service for Parlant
 
 A dynamic question-answering tool service that helps your Parlant agents provide accurate, traceable responses based on your FAQ data.
 
