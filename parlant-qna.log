@@ -1,0 +1,599 @@
+[2m2024-12-28T16:33:56.196663Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:34:01.193482Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 213,
+  "prompt_tokens": 305,
+  "total_tokens": 518,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:34:01.193856Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 4.997 seconds[0m
+[2m2024-12-28T16:46:34.941327Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:46:37.342864Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 198,
+  "prompt_tokens": 305,
+  "total_tokens": 503,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:46:37.343494Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.402 seconds[0m
+[2m2024-12-28T16:48:49.740860Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:48:52.117190Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 193,
+  "prompt_tokens": 305,
+  "total_tokens": 498,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:48:52.117511Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.377 seconds[0m
+[2m2024-12-28T16:50:45.997956Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:50:48.223500Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 200,
+  "prompt_tokens": 372,
+  "total_tokens": 572,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:50:48.223837Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.226 seconds[0m
+[2m2024-12-28T16:52:54.232799Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:52:56.768813Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 234,
+  "prompt_tokens": 369,
+  "total_tokens": 603,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:52:56.769400Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.537 seconds[0m
+[2m2024-12-28T16:53:46.281325Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:53:49.439588Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 205,
+  "prompt_tokens": 365,
+  "total_tokens": 570,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:53:49.439946Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 3.159 seconds[0m
+[2m2024-12-28T16:55:12.712368Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T16:55:15.492445Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 211,
+  "prompt_tokens": 385,
+  "total_tokens": 596,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T16:55:15.492738Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.78 seconds[0m
+[2m2024-12-28T17:02:03.589089Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:02:05.725454Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 180,
+  "prompt_tokens": 383,
+  "total_tokens": 563,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:02:05.728283Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.139 seconds[0m
+[2m2024-12-28T17:02:23.110235Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:02:25.306771Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 212,
+  "prompt_tokens": 384,
+  "total_tokens": 596,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:02:25.306998Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.197 seconds[0m
+[2m2024-12-28T17:02:47.704417Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:02:49.839371Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 201,
+  "prompt_tokens": 386,
+  "total_tokens": 587,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:02:49.840602Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.136 seconds[0m
+[2m2024-12-28T17:05:02.516306Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:05:04.803651Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 208,
+  "prompt_tokens": 386,
+  "total_tokens": 594,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:05:04.804078Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.288 seconds[0m
+[2m2024-12-28T17:05:39.812688Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:05:41.893762Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 198,
+  "prompt_tokens": 386,
+  "total_tokens": 584,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:05:41.894057Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.081 seconds[0m
+[2m2024-12-28T17:05:58.106773Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:06:00.151893Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 199,
+  "prompt_tokens": 386,
+  "total_tokens": 585,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:06:00.152375Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.046 seconds[0m
+[2m2024-12-28T17:12:49.636399Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:12:52.066420Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 226,
+  "prompt_tokens": 386,
+  "total_tokens": 612,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:12:52.066717Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.43 seconds[0m
+[2m2024-12-28T17:15:09.912647Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:15:13.377895Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 216,
+  "prompt_tokens": 471,
+  "total_tokens": 687,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:15:13.378209Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 3.466 seconds[0m
+[2m2024-12-28T17:17:54.911477Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:17:58.074614Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 267,
+  "prompt_tokens": 470,
+  "total_tokens": 737,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:17:58.074907Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 3.163 seconds[0m
+[2m2024-12-28T17:19:13.106565Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:19:15.761144Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 214,
+  "prompt_tokens": 475,
+  "total_tokens": 689,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:19:15.761472Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.655 seconds[0m
+[2m2024-12-28T17:19:17.250338Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:19:19.911777Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 259,
+  "prompt_tokens": 475,
+  "total_tokens": 734,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:19:19.912677Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.662 seconds[0m
+[2m2024-12-28T17:20:19.318713Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:20:21.568557Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 213,
+  "prompt_tokens": 477,
+  "total_tokens": 690,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:20:21.568859Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.25 seconds[0m
+[2m2024-12-28T17:20:23.235439Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:20:25.638325Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 206,
+  "prompt_tokens": 477,
+  "total_tokens": 683,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:20:25.638766Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.403 seconds[0m
+[2m2024-12-28T17:20:26.956043Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:20:29.036485Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 210,
+  "prompt_tokens": 477,
+  "total_tokens": 687,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:20:29.036707Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.081 seconds[0m
+[2m2024-12-28T17:20:30.278263Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:20:32.728811Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 209,
+  "prompt_tokens": 477,
+  "total_tokens": 686,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:20:32.729040Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.451 seconds[0m
+[2m2024-12-28T17:20:34.152322Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:20:36.122721Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 211,
+  "prompt_tokens": 477,
+  "total_tokens": 688,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:20:36.123547Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 1.971 seconds[0m
+[2m2024-12-28T17:22:23.737501Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:22:27.379061Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 253,
+  "prompt_tokens": 482,
+  "total_tokens": 735,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:22:27.379351Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 3.642 seconds[0m
+[2m2024-12-28T17:38:02.865759Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:38:05.483435Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 216,
+  "prompt_tokens": 485,
+  "total_tokens": 701,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:38:05.483783Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.618 seconds[0m
+[2m2024-12-28T17:52:32.517067Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) started[0m
+[2m2024-12-28T17:52:34.970384Z[0m [[32m[1mdebug    [0m] [1m[<main>] {
+  "completion_tokens": 164,
+  "prompt_tokens": 481,
+  "total_tokens": 645,
+  "completion_tokens_details": {
+    "accepted_prediction_tokens": 0,
+    "audio_tokens": 0,
+    "reasoning_tokens": 0,
+    "rejected_prediction_tokens": 0
+  },
+  "prompt_tokens_details": {
+    "audio_tokens": 0,
+    "cached_tokens": 0
+  }
+}[0m
+[2m2024-12-28T17:52:34.970931Z[0m [[32m[1minfo     [0m] [1m[<main>] OpenAI LLM Request (_AnswerSchema) finished in 2.454 seconds[0m
+[2m2024-12-29T08:56:37.670967Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T08:56:37.787350Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T08:56:37.787612Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T08:56:37.787660Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T08:56:37.787699Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T08:56:51.042733Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T08:56:51.045361Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T08:56:51.045492Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T08:59:01.355846Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T08:59:01.470262Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T08:59:01.470499Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T08:59:01.470549Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T08:59:01.470587Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T08:59:21.213618Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T08:59:21.218321Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T08:59:21.218513Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T08:59:30.351750Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T08:59:30.464854Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T08:59:30.465396Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T08:59:30.465499Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T08:59:30.465611Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T08:59:38.981176Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T08:59:38.986161Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T08:59:38.986334Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T09:32:05.511323Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T09:32:05.662290Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T09:32:05.663986Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T09:32:05.664156Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T09:32:05.664209Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T09:32:18.930355Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T09:32:18.934077Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T09:32:18.934240Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T09:32:25.135362Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T09:32:25.250127Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T09:32:25.250377Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T09:32:25.250426Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T09:32:25.250465Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T09:32:31.830959Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T09:32:31.833243Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T09:32:31.833381Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T09:32:44.246277Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T09:32:44.409925Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T09:32:44.410151Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T09:32:44.410205Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T09:32:44.410247Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T09:34:28.666003Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T09:34:28.668198Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T09:34:28.668315Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+[2m2024-12-29T09:34:32.349915Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Starting task 'Parlant QnA Server'[0m
+[2m2024-12-29T09:34:32.464521Z[0m [[32m[1minfo     [0m] [1m[<main>] .-----------------------------------------.[0m
+[2m2024-12-29T09:34:32.464780Z[0m [[32m[1minfo     [0m] [1m[<main>] | Server is ready for some serious action |[0m
+[2m2024-12-29T09:34:32.464829Z[0m [[32m[1minfo     [0m] [1m[<main>] '-----------------------------------------'[0m
+[2m2024-12-29T09:34:32.464869Z[0m [[32m[1minfo     [0m] [1m[<main>] Try the Sandbox UI at http://localhost:8800[0m
+[2m2024-12-29T09:37:35.189554Z[0m [[32m[1minfo     [0m] [1m[<main>] Shutting down module 'parlant_qna.module'[0m
+[2m2024-12-29T09:37:35.198245Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Shutting down[0m
+[2m2024-12-29T09:37:35.198442Z[0m [[32m[1minfo     [0m] [1m[<main>] BackgroundTaskService: Waiting for task 'Parlant QnA Server' to finish[0m
+Problem
+[2m2024-12-29T10:16:32.194669Z[0m [[33m[1mwarning  [0m] [1m[<main>] Problem              [0m
+[2m2024-12-29T10:17:45.050977Z[0m [[33m[1mwarning  [0m] [1m[parlant-qna] Problem         [0m
+[2m2024-12-29T10:49:41.162899Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Looking for answer for "Biff" in 1 stored question(s)[0m
+[2m2024-12-29T10:49:43.338349Z[0m [[32m[1mdebug    [0m] [1m[parlant-qna] {
+  "user_queries": [
+    "Biff"
+  ],
+  "relevant_question_variants": [
+    "Who is Biff?"
+  ],
+  "full_answer_can_be_found_in_background_info": true,
+  "partial_answer_can_be_found_in_background_info": false,
+  "insights_on_what_could_be_a_legitimate_answer": "The answer must directly explain who Biff is as described in the background information.",
+  "collected_relevant_quotes_from_background_info": [
+    {
+      "question_id": "Y2lNkrfNpt",
+      "quotes": [
+        "George Costanza in Seinfeld, played by Jason Alexander"
+      ]
+    }
+  ],
+  "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes": "George Costanza in Seinfeld, played by Jason Alexander",
+  "question_answered_in_full": true,
+  "question_answered_partially": false,
+  "question_not_answered_at_all": false
+}[0m
+[2m2024-12-29T14:31:02.604951Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Initialized Parlant Q&A[0m
+[2m2024-12-29T14:34:55.771025Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Initialized Parlant Q&A[0m
+[2m2024-12-29T14:35:08.814130Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /questions started[0m
+[2m2024-12-29T14:35:08.815422Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /questions finished in 0.001 seconds[0m
+[2m2024-12-29T14:35:50.896713Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:35:50.898674Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.002 seconds[0m
+[2m2024-12-29T14:35:54.425356Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls started[0m
+[2m2024-12-29T14:35:54.427470Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Looking for answer for "Biff" in 1 stored question(s)[0m
+[2m2024-12-29T14:35:54.429935Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls finished in 0.005 seconds[0m
+[2m2024-12-29T14:35:56.354628Z[0m [[32m[1mdebug    [0m] [1m[parlant-qna] {
+  "user_queries": [
+    "Biff"
+  ],
+  "relevant_question_variants": [
+    "Who is Biff?"
+  ],
+  "full_answer_can_be_found_in_background_info": true,
+  "partial_answer_can_be_found_in_background_info": true,
+  "insights_on_what_could_be_a_legitimate_answer": "A legitimate answer would explicitly describe who Biff is, which the background information confirms as George Costanza in Seinfeld, played by Jason Alexander.",
+  "collected_relevant_quotes_from_background_info": [
+    {
+      "question_id": "Y2lNkrfNpt",
+      "quotes": [
+        "George Costanza in Seinfeld, played by Jason Alexander"
+      ]
+    }
+  ],
+  "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes": "George Costanza in Seinfeld, played by Jason Alexander",
+  "question_answered_in_full": true,
+  "question_answered_partially": false,
+  "question_not_answered_at_all": false
+}[0m
+[2m2024-12-29T14:36:01.608681Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:36:01.610706Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.002 seconds[0m
+[2m2024-12-29T14:36:41.703613Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Initialized Parlant Q&A[0m
+[2m2024-12-29T14:36:54.330381Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:36:54.331033Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.001 seconds[0m
+[2m2024-12-29T14:36:58.234339Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls started[0m
+[2m2024-12-29T14:36:58.236535Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Looking for answer for "Where do I remember someone called Biff from?" in 1 stored question(s)[0m
+[2m2024-12-29T14:36:58.239005Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls finished in 0.005 seconds[0m
+[2m2024-12-29T14:37:00.714923Z[0m [[32m[1mdebug    [0m] [1m[parlant-qna] {
+  "user_questions": [
+    "Where do I remember someone called Biff from?"
+  ],
+  "relevant_question_variants": [
+    "Who is Biff?"
+  ],
+  "full_answer_can_be_found_in_background_info": true,
+  "partial_answer_can_be_found_in_background_info": false,
+  "insights_on_what_could_be_a_legitimate_answer": "The most relevant answer is that Biff refers to George Costanza in Seinfeld, played by Jason Alexander.",
+  "collected_relevant_quotes_from_background_info": [
+    {
+      "question_id": "Y2lNkrfNpt",
+      "quotes": [
+        "George Costanza in Seinfeld, played by Jason Alexander"
+      ]
+    }
+  ],
+  "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes": "George Costanza in Seinfeld, played by Jason Alexander",
+  "question_answered_in_full": true,
+  "question_answered_partially": false,
+  "question_not_answered_at_all": false
+}[0m
+[2m2024-12-29T14:37:04.433264Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:37:04.433757Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.0 seconds[0m
+[2m2024-12-29T14:41:42.690256Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Initialized Parlant Q&A[0m
+[2m2024-12-29T14:43:04.816517Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:43:04.818380Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.002 seconds[0m
+[2m2024-12-29T14:43:08.583702Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls started[0m
+[2m2024-12-29T14:43:08.585406Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Looking for answer for "Where do I remember someone called Biff from?" in 1 stored question(s)[0m
+[2m2024-12-29T14:43:08.588533Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: POST /tools/find_answer/calls finished in 0.005 seconds[0m
+[2m2024-12-29T14:43:11.137532Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] Question: "Where do I remember someone called Biff from?"; Answer (full): "George Costanza in Seinfeld, played by Jason Alexander"[0m
+[2m2024-12-29T14:43:18.608866Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer started[0m
+[2m2024-12-29T14:43:18.610050Z[0m [[32m[1minfo     [0m] [1m[parlant-qna] HTTP Request: GET /tools/find_answer finished in 0.001 seconds[0m
