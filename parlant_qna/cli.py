@@ -90,7 +90,7 @@ def main() -> None:
                 ),
             )
 
-    @cli.command("server", help="Run as a standalone server")
+    @cli.command("serve", help="Run as a standalone server")
     @click.option(
         "-p",
         "--port",

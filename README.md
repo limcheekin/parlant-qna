@@ -39,7 +39,7 @@ You can run the service in two ways:
 
 ```bash
 # As a standalone server
-parlant-qna server
+parlant-qna serve
 
 # Or as a hosted module within your Parlant server
 parlant --module parlant_qna.module
