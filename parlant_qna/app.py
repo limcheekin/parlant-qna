@@ -396,7 +396,7 @@ Produce a JSON object according to the following schema: ###
                 )
                 for q in result.content.collected_relevant_quotes_from_background_info
             ],
-            extracted_entities=result.content.extracted_entities_found_in_background_info
+            extracted_entities=result.content.extracted_entities_found_in_background_info_and_referred_to_by_answer
             or [],
         )
 
