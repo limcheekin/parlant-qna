@@ -35,6 +35,12 @@ The service carefully evaluates each question against your FAQ, providing:
 
 ### 🚀 Getting Started
 
+Install `parlant-qna`:
+
+```bash
+$ pip install parlant-qna
+```
+
 You can run the service in two ways:
 
 ```bash
@@ -42,7 +48,7 @@ You can run the service in two ways:
 parlant-qna serve
 
 # Or as a hosted module within your Parlant server
-parlant --module parlant_qna.module
+parlant-server --module parlant_qna.module
 ```
 
 ### 📚 Adding FAQs

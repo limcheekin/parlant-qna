@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import asyncio
 from collections.abc import AsyncIterator
 import os
 from pathlib import Path
@@ -80,3 +81,13 @@ async def test_that_a_question_can_be_added_based_on_background_info(app: App) -
         context=f"Question: {question} ;; Answer: {answer.content}",
         condition="The answer to the question is 38",
     )
+
+
+async def test_report(parlant_qna: App) -> None:
+    report_id = await parlant_qna.create_report(sample_percentage=10)
+
+    while (report := await parlant_qna.read_report(report_id)).status == "running":
+        await asyncio.sleep(5)
+        print(len(report.samples))
+
+    print(report)

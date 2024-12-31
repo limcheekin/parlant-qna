@@ -127,6 +127,74 @@ async def wrap_with_management_endpoints(qna_app: App, api: FastAPI) -> FastAPI:
             }
         )
 
+    @api.post("/reports")
+    async def create_report(sample_percentage: int = Body(embed=True)) -> JSONResponse:
+        report_id = await qna_app.create_report(sample_percentage)
+        return JSONResponse(content={"report_id": report_id})
+
+    @api.get("/reports/{report_id}")
+    async def read_report(report_id: str) -> JSONResponse:
+        report = await qna_app.read_report(report_id)
+
+        return JSONResponse(
+            content={
+                "report": {
+                    "status": report.status,
+                    "expected_samples": report.expected_samples,
+                    "completed_samples": len(report.samples),
+                    "hallucinations": {
+                        s.question_id: {
+                            "query": s.variant,
+                            "answer": s.answer.content,
+                            "references": [asdict(r) for r in s.answer.references],
+                            "entities": s.answer.extracted_entities,
+                            "issue": s.hallucination,
+                        }
+                        for s in report.samples
+                        if s.hallucination
+                    },
+                    "matrix": {
+                        "tp": report.true_positives,
+                        "tn": report.true_negatives,
+                        "fp": report.false_positives,
+                        "fn": report.false_negatives,
+                        "ptp": len(
+                            [
+                                s
+                                for s in report.samples
+                                if s.answer.grade == "partial" and s.true_positive
+                            ]
+                        ),
+                        "ptn": len(
+                            [
+                                s
+                                for s in report.samples
+                                if s.answer.grade == "partial" and s.true_negative
+                            ]
+                        ),
+                        "pfp": len(
+                            [
+                                s
+                                for s in report.samples
+                                if s.answer.grade == "partial" and s.false_positive
+                            ]
+                        ),
+                        "pfn": len(
+                            [
+                                s
+                                for s in report.samples
+                                if s.answer.grade == "partial" and s.false_negative
+                            ]
+                        ),
+                    },
+                    "precision": report.precision,
+                    "recall": report.recall,
+                    "accuracy": report.accuracy,
+                    "f1": report.f1,
+                }
+            }
+        )
+
     return api
 
 

@@ -13,9 +13,11 @@
 # limitations under the License.
 
 import asyncio
+import json
 import os
 import sys
 from dataclasses import dataclass
+import time
 from typing import cast
 
 import click
@@ -23,6 +25,13 @@ import httpx
 import rich
 from rich import box
 from rich.table import Table
+from rich.progress import (
+    Progress,
+    TextColumn,
+    BarColumn,
+    MofNCompleteColumn,
+    TimeRemainingColumn,
+)
 
 from parlant_qna.app import create_persistent_app
 from parlant_qna.server import create_server
@@ -46,6 +55,9 @@ def main() -> None:
 
     def get_client(ctx: click.Context) -> httpx.Client:
         return cast(Config, ctx.obj).client
+
+    def write_error(message: str) -> None:
+        rich.print(f"[bold red]error: {message}")
 
     def die_if_error(response: httpx.Response, message: str | None = None) -> None:
         if response.is_success:
@@ -199,13 +211,18 @@ def main() -> None:
 
         table = Table(box=box.ROUNDED, border_style="bright_green")
 
-        headers = questions[0].keys()
+        headers = map(str.capitalize, questions[0].keys())
+
+        table.add_column("#", header_style="bright_green", overflow="fold")
 
         for header in headers:
             table.add_column(header, header_style="bright_green", overflow="fold")
 
+        index = 1
+
         for q in questions:
-            table.add_row(*list(map(str, q.values())))
+            table.add_row(*[str(index)] + list(map(str, q.values())))
+            index += 1
 
         rich.print(table)
 
@@ -228,6 +245,114 @@ def main() -> None:
         die_if_error(response, "delete question")
 
         success(f"deleted question (id: {id})")
+
+    @cli.command(
+        "report",
+        help="Test and create a confusion matrix",
+    )
+    @click.option(
+        "-s",
+        "--sample-percentage",
+        default=10,
+        show_default=True,
+        help="Sample percentage",
+    )
+    @click.pass_context
+    def report(ctx: click.Context, sample_percentage: int) -> None:
+        response = get_client(ctx).post(
+            "/reports", json={"sample_percentage": sample_percentage}
+        )
+        die_if_error(response, "create report")
+        report_id = response.json()["report_id"]
+
+        response = get_client(ctx).get(f"/reports/{report_id}")
+        die_if_error(response, "read report status")
+        report = response.json()["report"]
+
+        with Progress(
+            TextColumn("{task.description}"),
+            BarColumn(),
+            MofNCompleteColumn(),
+            TimeRemainingColumn(elapsed_when_finished=True),
+        ) as progress:
+            task = progress.add_task(
+                description=f"Recall: {report['recall']:.3f} | Precision: {report['precision']:.3f}",
+                total=report["expected_samples"],
+            )
+
+            while True:
+                time.sleep(1)
+
+                response = get_client(ctx).get(f"/reports/{report_id}")
+                die_if_error(response, "read report status")
+                report = response.json()["report"]
+
+                progress.update(
+                    task,
+                    description=f"Recall: {report['recall']:.3f} | Precision: {report['precision']:.3f}",
+                    completed=int(report["completed_samples"]),
+                )
+
+                if report["status"] != "running":
+                    break
+
+        if report["status"] == "failed":
+            write_error("Report generation failed")
+
+        table = Table(box=box.ROUNDED, border_style="bright_green")
+
+        headers = (
+            "Accuracy",
+            "Recall",
+            "Precision",
+            "F1",
+            "TP",
+            "TN",
+            "FP",
+            "FN",
+            "Partial",
+        )
+
+        for header in headers:
+            table.add_column(header, header_style="bright_green", overflow="fold")
+
+        table.add_row(
+            f"{report['accuracy']:.3f}",
+            f"{report['recall']:.3f}",
+            f"{report['precision']:.3f}",
+            f"{report['f1']:.3f}",
+            f'{report["matrix"]["tp"]} (Partial: {report["matrix"]["ptp"]})',
+            f'{report["matrix"]["tn"]} (Partial: {report["matrix"]["ptn"]})',
+            f'{report["matrix"]["fp"]} (Partial: {report["matrix"]["pfp"]})',
+            f'{report["matrix"]["fn"]} (Partial: {report["matrix"]["pfn"]})',
+        )
+
+        rich.print(table)
+
+        if hallucinations := report["hallucinations"]:
+            table = Table(box=box.ROUNDED, border_style="bright_green")
+
+            for header in (
+                "Question Id",
+                "Query",
+                "Generated Answer",
+                "Additional References",
+                "Extracted Entities",
+                "Issue",
+            ):
+                table.add_column(header, header_style="bright_green", overflow="fold")
+
+            for question_id, item in hallucinations.items():
+                table.add_row(
+                    str(question_id),
+                    str(item["query"]),
+                    str(item["answer"]),
+                    str(json.dumps(item["references"], indent=2)),
+                    str(",".join(item["entities"])),
+                    str(item["issue"]),
+                )
+
+            rich.print(table)
 
     @cli.command(
         "help",
