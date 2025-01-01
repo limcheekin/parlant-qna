@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from contextlib import AsyncExitStack
+import os
 
 from lagom import Container
 from parlant.core.nlp.service import NLPService
@@ -22,7 +23,7 @@ from parlant.core.services.tools.service_registry import ServiceRegistry
 from parlant_qna.app import create_persistent_app
 from parlant_qna.server import create_server
 
-PORT = 8807
+PORT = int(os.environ.get("PARLANT_QNA_PORT", 8807))
 SERVER_INSTANCE: PluginServer | None = None
 EXIT_STACK: AsyncExitStack | None = None
 
