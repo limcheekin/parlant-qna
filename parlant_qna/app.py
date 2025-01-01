@@ -97,6 +97,7 @@ class _AnswerSchema(DefaultBaseModel):
     what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes: (
         str | None
     ) = None
+    could_use_better_markdown: bool | None = None
     concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised: (
         str | None
     ) = None
@@ -317,6 +318,11 @@ a direct continuation of a different question).
 
 IMPORTANT: Try your best to answer the question *fully*, based on the background information provided.
 
+Always attempt to provide the answer in a clean Markdown format,
+separating your answer into multiple lines where applicable, for readability,
+using Markdown elements like bold text, lists, and tables where applicable.
+However, avoid headings, to make your responses more conversational.
+
 Finally, note that, for review and improvement purposes, it's important to capture the quotes
 on which you base your answer, as well as any entity you've made reference to.
 Examples of entities are (but not limited to): pronouns, products, companies, domain-specific concepts, etc.
@@ -346,6 +352,7 @@ Produce a JSON object according to the following schema: ###
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "critique": <"EXPLAIN IF ANY PART OF THE DRAFT IS UNBASED/UNGROUNDED IN BACKGROUND INFO">,
     "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": <"EXPLANATION OF WHAT NEEDS TO CHANGE TO MITIGATE FACTUAL ISSUES">,
+    "could_use_better_markdown": <BOOL>,
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "extracted_entities_found_in_background_info_and_referred_to_by_answer": [ ENTITY_1, ..., ENTITY_N ],
     "question_answered_in_full": <BOOL>,
@@ -584,7 +591,7 @@ Answer: {q.answer}
         ALSO NOTE: It is okay for an answer to cover more than was was asked, as long as the information
         provided is directly based on the provided ground truth.
 
-        You must asses the following, providing a JSON object with the following format:
+        You must evaluate the following conditions, providing a JSON object with the following format:
         insights_and_evaluation_on_the_generated_answer_compared_to_the_original: str
         does_the_generated_answer_contain_hallucinations: bool
         detected_hallucination_explanation: str | None

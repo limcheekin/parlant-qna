@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "parlant-qna"
-version = "0.2.1"
+version = "0.2.2"
 description = "A questions and answers tool service for Parlant"
 authors = ["Yam Marcovitz <yam@emcie.co>"]
 license = "Apache-2.0"
