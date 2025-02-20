@@ -62,6 +62,10 @@ class _TestLogger(Logger):
     def operation(self, name: str, props: dict[str, Any] = {}) -> Iterator[None]:
         yield
 
+    @contextmanager
+    def scope(self, scope_id: str) -> Iterator[None]:
+        yield
+
 
 async def nlp_test(context: str, condition: str) -> bool:
     schematic_generator = GPT_4o[NLPTestSchema](logger=_TestLogger())

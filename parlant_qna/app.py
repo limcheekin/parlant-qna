@@ -18,7 +18,7 @@ from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Literal, Sequence, TypeAlias, cast
+from typing import Any, Literal, Sequence, TypeAlias, cast, Optional
 
 import aiofiles
 from parlant.adapters.db.json_file import JSONFileDocumentDatabase
@@ -85,25 +85,27 @@ class _RelevantQuotes(DefaultBaseModel):
 
 class _AnswerSchema(DefaultBaseModel):
     user_questions: list[str]
-    relevant_question_variants: list[str] | None = None
+    relevant_question_variants: Optional[list[str]] = None
     full_answer_can_be_found_in_background_info: bool
     partial_answer_can_be_found_in_background_info: bool
-    insights_on_what_could_be_a_legitimate_answer: str | None = None
-    collected_relevant_quotes_from_background_info: list[_RelevantQuotes] | None = None
-    concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft: (
-        str | None
-    ) = None
-    critique: str | None = None
-    what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes: (
-        str | None
-    ) = None
-    could_use_better_markdown: bool | None = None
-    concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised: (
-        str | None
-    ) = None
-    extracted_entities_found_in_background_info_and_referred_to_by_answer: (
-        list[str] | None
-    ) = None
+    insights_on_what_could_be_a_legitimate_answer: Optional[str] = None
+    collected_relevant_quotes_from_background_info: Optional[list[_RelevantQuotes]] = (
+        None
+    )
+    concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft: Optional[
+        str
+    ] = None
+    critique: Optional[str] = None
+    what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes: Optional[
+        str
+    ] = None
+    could_use_better_markdown: Optional[bool] = None
+    concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised: Optional[
+        str
+    ] = None
+    extracted_entities_found_in_background_info_and_referred_to_by_answer: Optional[
+        list[str]
+    ] = None
     question_answered_in_full: bool
     question_answered_partially: bool
     question_not_answered_at_all: bool
@@ -112,7 +114,7 @@ class _AnswerSchema(DefaultBaseModel):
 class _TestSchema(DefaultBaseModel):
     insights_and_evaluation_on_the_generated_answer_compared_to_the_original: str
     does_the_generated_answer_contain_hallucinations: bool
-    detected_hallucination_explanation: str | None = None
+    detected_hallucination_explanation: Optional[str] = None
     does_the_generated_answer_contain_any_facts_that_are_not_given_in_the_original_question_and_answer: bool
     does_the_generated_answer_provide_a_full_answer: bool
     does_the_generated_answer_provide_a_partial_answer: bool
@@ -133,7 +135,7 @@ class Reference:
 
 @dataclass(frozen=True)
 class Answer:
-    content: str | None
+    content: Optional[str]
     grade: AnswerGrade
     generation_info: GenerationInfo
     evaluation: str
@@ -148,7 +150,7 @@ class ReportSample:
     answer: Answer
     evaluation: str
     references_check_out: bool
-    hallucination: str | None
+    hallucination: Optional[str]
 
     @property
     def score(self) -> float:
@@ -259,6 +261,9 @@ class App:
         self._reports: dict[str, Report] = {}
         self._task_service = QNABackgroundTaskService(logger)
         self._report_lock = asyncio.Lock()
+
+    async def identity_loader(self, doc: BaseDocument) -> _QuestionDocument:
+        return cast(_QuestionDocument, doc)
 
     async def __aenter__(self, *args: Any, **kwargs: Any) -> Self:
         self._collection = await self._db.get_or_create_collection(
@@ -457,8 +462,8 @@ Answer: {q.answer}
     async def update_question(
         self,
         question_id: str,
-        variants: list[str] | None = None,
-        answer: str | None = None,
+        variants: Optional[list[str]] = None,
+        answer: Optional[str] = None,
     ) -> Question:
         if question_id not in self._questions:
             raise KeyError()
@@ -677,7 +682,7 @@ async def create_persistent_app(
     logger = FileLogger(
         Path("parlant-qna.log"),
         correlator,
-        log_level=LogLevel.INFO,
+        log_level=LogLevel.DEBUG,
         logger_id="parlant-qna",
     )
 
