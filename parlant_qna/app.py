@@ -346,7 +346,7 @@ Produce a JSON object according to the following schema: ###
     "relevant_question_variants": [ VARIANT_1, ..., VARIANT_N ],
     "full_answer_can_be_found_in_background_info": <BOOL>,
     "partial_answer_can_be_found_in_background_info": <BOOL>,
-    "insights_on_what_could_be_a_legitimate_answer": <"YOUR INSIGHTS AS TO WHAT COULD BE A legitimate ANSWER">,
+    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A legitimate ANSWER">,
     "collected_relevant_quotes_from_background_info": [
         {{
             "question_id": QUESTION_ID,
@@ -363,6 +363,27 @@ Produce a JSON object according to the following schema: ###
     "question_answered_in_full": <BOOL>,
     "question_answered_partially": <BOOL>,
     "question_not_answered_at_all": <BOOL>
+}}
+###
+
+
+Please note that in case you couldn't find any answer (neither full nor partial), meaning, you couldn't find specific quotes in the background info, this is the format you should follow — note specifically how some of the fields in this case are left as null : ###
+{{
+    "user_questions": [ QUERY_1, ..., QUERY_N ],
+    "relevant_question_variants": [],
+    "full_answer_can_be_found_in_background_info": false,
+    "partial_answer_can_be_found_in_background_info": false,
+    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A legitimate ANSWER">,
+    "collected_relevant_quotes_from_background_info": [],
+    "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": null,
+    "critique": null,
+    "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": null,
+    "could_use_better_markdown": null,
+    "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised": null,
+    "extracted_entities_found_in_background_info_and_referred_to_by_answer": [ ENTITY_1, ..., ENTITY_N ],
+    "question_answered_in_full": false,
+    "question_answered_partially": false,
+    "question_not_answered_at_all": true
 }}
 ###
 """
