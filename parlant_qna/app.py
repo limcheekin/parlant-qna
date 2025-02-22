@@ -434,6 +434,14 @@ User Question: ###
                 result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft
                 or None
             )
+        elif (
+            result.content.brief_explanation_of_what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes
+            and result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft
+        ):
+            self.logger.warning(
+                "Underlying LLM failed to generate a revised answer; falling back to draft"
+            )
+            final_answer = result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft
 
         answer = Answer(
             content=final_answer,
