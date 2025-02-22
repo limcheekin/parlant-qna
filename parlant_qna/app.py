@@ -332,14 +332,6 @@ Finally, note that, for review and improvement purposes, it's important to captu
 on which you base your answer, as well as any entity you've made reference to.
 Examples of entities are (but not limited to): pronouns, products, companies, domain-specific concepts, etc.
 
-Background Information: ###
-{background_info}
-###
-
-User Question: ###
-{question}
-###
-
 You must produce the following report.
 - What is the user asking? Is it one question? Is it different ones? Rephrase the user's input approrpiately to better articulate this.
 - What question variants from the provided background information contain the answer to each of the user's queries?
@@ -394,6 +386,14 @@ Please note that in case you couldn't find any answer (neither full nor partial)
     "question_answered_partially": false,
     "question_not_answered_at_all": true
 }}
+###
+
+User Question: ###
+{question}
+###
+
+Background Information: ###
+{background_info}
 ###
 """
 
