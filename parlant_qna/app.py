@@ -425,8 +425,18 @@ User Question: ###
                 extracted_entities=[],
             )
 
+        final_answer = None
+
+        if result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised:
+            final_answer = result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised
+        elif not result.content.brief_explanation_of_what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes:
+            final_answer = (
+                result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft
+                or None
+            )
+
         answer = Answer(
-            content=result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised,
+            content=final_answer,
             evaluation=result.content.insights_on_what_could_be_a_legitimate_answer
             or "",
             grade="full" if result.content.question_answered_in_full else "partial",
