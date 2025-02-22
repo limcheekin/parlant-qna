@@ -96,7 +96,7 @@ class _AnswerSchema(DefaultBaseModel):
         str
     ] = None
     critique: Optional[str] = None
-    what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes: Optional[
+    brief_explanation_of_what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes: Optional[
         str
     ] = None
     could_use_better_markdown: Optional[bool] = None
@@ -357,7 +357,7 @@ Produce a JSON object according to the following schema: ###
     ],
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "critique": <"EXPLAIN IF ANY PART OF THE DRAFT IS UNBASED/UNGROUNDED IN BACKGROUND INFO">,
-    "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": <"BRIEF EXPLANATION OF WHAT NEEDS TO CHANGE TO MITIGATE FACTUAL ISSUES">,
+    "brief_explanation_of_what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": <"BRIEF EXPLANATION OF WHAT NEEDS TO CHANGE TO MITIGATE FACTUAL ISSUES">,
     "could_use_better_markdown": <BOOL>,
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "extracted_entities_found_in_background_info_and_referred_to_by_answer": [ ENTITY_1, ..., ENTITY_N ],
@@ -378,7 +378,7 @@ Please note that in case you couldn't find any answer (neither full nor partial)
     "collected_relevant_quotes_from_background_info": [],
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": null,
     "critique": null,
-    "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": null,
+    "brief_explanation_of_what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": "N/A",
     "could_use_better_markdown": null,
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised": null,
     "extracted_entities_found_in_background_info_and_referred_to_by_answer": [ ENTITY_1, ..., ENTITY_N ],
