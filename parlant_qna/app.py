@@ -388,12 +388,12 @@ Please note that in case you couldn't find any answer (neither full nor partial)
 }}
 ###
 
-User Question: ###
-{question}
-###
-
 Background Information: ###
 {background_info}
+###
+
+User Question: ###
+{question}
 ###
 """
 
