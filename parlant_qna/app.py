@@ -340,13 +340,22 @@ User Question: ###
 {question}
 ###
 
+You must produce the following report.
+- What is the user asking? Is it one question? Is it different ones? Rephrase the user's input approrpiately to better articulate this.
+- What question variants from the provided background information contain the answer to each of the user's queries?
+- Determine if any or all of the user's queries can be answered (fully or at least partially) solely based on and using the background information provided here exclusively.
+- Try to reason about what could be a satisfying answer to the user. Use your generated insight to seek out the most relevant quotes from the background information, making sure to stay exclusively within the bounds of the background information provided here.
+- Draft an answer. Make sure it's nicely formatted with Markdown.
+- Critique your initial answer to ensure it meets all of the required standards you are given here.
+- Draft a final, satisfactory answer, that stays within the strict bounds and standards you are given here.
+
 Produce a JSON object according to the following schema: ###
 {{
     "user_questions": [ QUERY_1, ..., QUERY_N ],
     "relevant_question_variants": [ VARIANT_1, ..., VARIANT_N ],
     "full_answer_can_be_found_in_background_info": <BOOL>,
     "partial_answer_can_be_found_in_background_info": <BOOL>,
-    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A legitimate ANSWER">,
+    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A LEGITIMATE ANSWER">,
     "collected_relevant_quotes_from_background_info": [
         {{
             "question_id": QUESTION_ID,
@@ -356,7 +365,7 @@ Produce a JSON object according to the following schema: ###
     ],
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "critique": <"EXPLAIN IF ANY PART OF THE DRAFT IS UNBASED/UNGROUNDED IN BACKGROUND INFO">,
-    "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": <"EXPLANATION OF WHAT NEEDS TO CHANGE TO MITIGATE FACTUAL ISSUES">,
+    "what_needs_to_change_in_order_to_stay_within_the_boundaries_of_collected_quotes": <"BRIEF EXPLANATION OF WHAT NEEDS TO CHANGE TO MITIGATE FACTUAL ISSUES">,
     "could_use_better_markdown": <BOOL>,
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__revised": <"PRODUCE AN ANSWER HERE EXCLUSIVELY AND ONLY BASED ON THE COLLECTED QUOTES, WITHOUT ADDING ANYTHING ELSE">
     "extracted_entities_found_in_background_info_and_referred_to_by_answer": [ ENTITY_1, ..., ENTITY_N ],
@@ -367,13 +376,13 @@ Produce a JSON object according to the following schema: ###
 ###
 
 
-Please note that in case you couldn't find any answer (neither full nor partial), meaning, you couldn't find specific quotes in the background info, this is the format you should follow — note specifically how some of the fields in this case are left as null : ###
+Please note that in case you couldn't find any answer (neither full nor partial) within the background information provided here, meaning, you couldn't find specific quotes in the background info, then this is the format you should follow in such a case — note specifically how some of the fields in this case are left as null : ###
 {{
     "user_questions": [ QUERY_1, ..., QUERY_N ],
     "relevant_question_variants": [],
     "full_answer_can_be_found_in_background_info": false,
     "partial_answer_can_be_found_in_background_info": false,
-    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A legitimate ANSWER">,
+    "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD HAVE BEEN A LEGITIMATE ANSWER">,
     "collected_relevant_quotes_from_background_info": [],
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": null,
     "critique": null,
