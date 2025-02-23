@@ -11,11 +11,10 @@ parlant-qna = "parlant_qna.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-parlant = "1.6.5"
+parlant = "1.6.6"
 pyright = "^1.1.391"
 structlog = "^24.4.0"
 colorama = "^0.4.6"
-parlant-client = {git = "https://github.com/emcie-co/parlant-client-python.git", rev = "develop"}
 
 
 [tool.poetry.group.dev.dependencies]

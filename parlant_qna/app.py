@@ -397,7 +397,13 @@ User Question: ###
 ###
 """
 
-        result = await self._generator.generate(prompt, hints={"strict": True})
+        result = await self._generator.generate(
+            prompt,
+            hints={
+                "strict": True,
+                "temperature": 0.1,
+            },
+        )
 
         self.logger.debug(result.content.model_dump_json(indent=2))
 
@@ -444,7 +450,11 @@ User Question: ###
             final_answer = result.content.concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft
 
         answer = Answer(
-            content=final_answer,
+            content=final_answer
+            and final_answer.encode("utf8")
+            .decode("unicode-escape")
+            .encode("utf16", "surrogatepass")
+            .decode("utf16"),
             evaluation=result.content.insights_on_what_could_be_a_legitimate_answer
             or "",
             grade="full" if result.content.question_answered_in_full else "partial",
