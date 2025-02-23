@@ -19,9 +19,9 @@ from typing import (
     Iterator,
 )
 
-from parlant.adapters.nlp.openai import GPT_4o
+from parlant.adapters.nlp.openai_service import GPT_4o
 from parlant.core.common import DefaultBaseModel
-from parlant.core.logging import LogLevel, Logger
+from parlant.core.loggers import LogLevel, Logger
 
 
 class NLPTestSchema(DefaultBaseModel):

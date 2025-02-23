@@ -23,11 +23,11 @@ from typing import Any, Literal, Sequence, TypeAlias, cast, Optional
 import aiofiles
 from parlant.adapters.db.json_file import JSONFileDocumentDatabase
 from parlant.adapters.db.transient import TransientDocumentDatabase
-from parlant.adapters.nlp.openai import OpenAIService
+from parlant.adapters.nlp.openai_service import OpenAIService
 from parlant.core.background_tasks import BackgroundTaskService
 from parlant.core.common import DefaultBaseModel, Version, generate_id
 from parlant.core.contextual_correlator import ContextualCorrelator
-from parlant.core.logging import FileLogger, Logger, LogLevel, StdoutLogger
+from parlant.core.loggers import FileLogger, Logger, LogLevel, StdoutLogger
 from parlant.core.nlp.generation import GenerationInfo
 from parlant.core.nlp.service import NLPService
 from parlant.core.persistence.common import ObjectId
