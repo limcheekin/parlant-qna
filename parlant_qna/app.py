@@ -269,6 +269,7 @@ class App:
         self._collection = await self._db.get_or_create_collection(
             "questions",
             schema=_QuestionDocument,
+            document_loader=self.identity_loader,
         )
 
         self._generator = await self._service.get_schematic_generator(_AnswerSchema)
