@@ -86,8 +86,8 @@ class _RelevantQuotes(DefaultBaseModel):
 class _AnswerSchema(DefaultBaseModel):
     user_questions: list[str]
     relevant_question_variants: Optional[list[str]] = None
-    full_answer_can_be_found_in_background_info: bool
-    partial_answer_can_be_found_in_background_info: bool
+    full_answer_can_be_found_in_background_info: Optional[str] = None
+    partial_answer_can_be_found_in_background_info: Optional[str] = None
     insights_on_what_could_be_a_legitimate_answer: Optional[str] = None
     collected_relevant_quotes_from_background_info: Optional[list[_RelevantQuotes]] = (
         None
@@ -346,8 +346,8 @@ Produce a JSON object according to the following schema: ###
 {{
     "user_questions": [ QUERY_1, ..., QUERY_N ],
     "relevant_question_variants": [ VARIANT_1, ..., VARIANT_N ],
-    "full_answer_can_be_found_in_background_info": <BOOL>,
-    "partial_answer_can_be_found_in_background_info": <BOOL>,
+    "full_answer_can_be_found_in_background_info": <"BRIEF EXPLANATION OF WHETHER AND WHY">,
+    "partial_answer_can_be_found_in_background_info": <"BRIEF EXPLANATION OF WHETHER AND WHY">,
     "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD BE A LEGITIMATE ANSWER">,
     "collected_relevant_quotes_from_background_info": [
         {{
@@ -373,8 +373,8 @@ Please note that in case you couldn't find any answer (neither full nor partial)
 {{
     "user_questions": [ QUERY_1, ..., QUERY_N ],
     "relevant_question_variants": [],
-    "full_answer_can_be_found_in_background_info": false,
-    "partial_answer_can_be_found_in_background_info": false,
+    "full_answer_can_be_found_in_background_info": null,
+    "partial_answer_can_be_found_in_background_info": null,
     "insights_on_what_could_be_a_legitimate_answer": <"YOUR BRIEF INSIGHTS AS TO WHAT COULD HAVE BEEN A LEGITIMATE ANSWER">,
     "collected_relevant_quotes_from_background_info": [],
     "concise_and_minimal_synthesized_answer_based_solely_on_relevant_quotes__draft": null,
