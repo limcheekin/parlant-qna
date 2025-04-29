@@ -18,7 +18,7 @@ from typing import Awaitable, Callable, cast
 
 from fastapi import Body, FastAPI, HTTPException, Query, Request, Response, status
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse,
+from fastapi.responses import JSONResponse
 from parlant.sdk import PluginServer, ToolContext, ToolResult, tool
 
 from parlant_qna.app import App
