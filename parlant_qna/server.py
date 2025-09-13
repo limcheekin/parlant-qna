@@ -111,7 +111,7 @@ async def wrap_with_management_endpoints(qna_app: App, api: FastAPI) -> FastAPI:
                 detail=f"Question '{question_id}' not found",
             )
 
-    @api.delete("/questions/{question_id}")
+    @api.delete("/questions/{question_id}", status_code=status.HTTP_204_NO_CONTENT,)
     async def delete_question(question_id: str) -> None:
         await qna_app.delete_question(question_id)
 

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "parlant-qna"
-version = "0.2.4"
+version = "0.2.5"
 description = "A questions and answers tool service for Parlant"
 authors = ["Yam Marcovitz <yam@emcie.co>"]
 license = "Apache-2.0"
@@ -11,7 +11,7 @@ parlant-qna = "parlant_qna.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-parlant = "1.7.0-rc.11"
+parlant = "^2.0.0"
 pyright = "^1.1.391"
 structlog = "^24.4.0"
 colorama = "^0.4.6"
