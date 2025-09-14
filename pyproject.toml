@@ -11,7 +11,7 @@ parlant-qna = "parlant_qna.cli:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-parlant = "^2.0.0"
+parlant = "^3.0"
 pyright = "^1.1.391"
 structlog = "^24.4.0"
 colorama = "^0.4.6"
