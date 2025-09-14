@@ -752,7 +752,7 @@ async def create_persistent_app(
         logger=logger,
         file_path=Path("parlant-qna-db.json"),
     ) as db:
-        with correlator.correlation_scope("parlant-qna"):
+        with correlator.scope("parlant-qna"):
             async with App(db, service, logger) as app:
                 logger.info("Initialized Parlant Q&A")
                 yield app
@@ -764,6 +764,6 @@ async def create_transient_app() -> AsyncIterator[App]:
     logger = StdoutLogger(correlator, logger_id="parlant-qna")
     service = OpenAIService(logger)
 
-    with correlator.correlation_scope("parlant-qna"):
+    with correlator.scope("parlant-qna"):
         async with App(TransientDocumentDatabase(), service, logger) as app:
             yield app
