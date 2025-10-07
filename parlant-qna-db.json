@@ -1,0 +1,132 @@
+{
+  "questions": [
+    {
+      "id": "uHuvAIo4Q6",
+      "version": "0.1.0",
+      "variants": [
+        "How do different team members collaborate when building and maintaining Parlant agents?",
+        "\"What's the workflow when multiple people are involved in developing an agent?\"",
+        "\"How do business teams and developers work together with Parlant?\""
+      ],
+      "answer": "Collaborating on AI agents traditionally creates friction between technical and business teams. Developers need to translate business requirements into complex prompts or conversation flows, while business stakeholders struggle to verify if their requirements are being implemented correctly. Parlant transforms this dynamic by creating clear separation of concerns and enabling different teams to contribute in their areas of expertise.\n\nLet's walk through how this typically works in practice. Imagine you're building a customer service agent for an e-commerce company. Your development team implements the core tools the agent needs—functions for checking inventory, processing returns, or accessing customer data. These are pure code, following normal software development practices.\n\nMeanwhile, your customer service team can focus on defining guidelines for how these tools should be used. They might specify that customers should always be greeted by name if available, or that refund policies should be explained before processing a return. These guidelines are written in clear, business-oriented language that non-technical team members can understand and verify.\n\nWhen changes are needed, each team can work independently within their domain. If the development team needs to update how order status is checked, they can modify that tool's implementation without touching the guidelines. If the customer service team wants to adjust how premium customers are handled, they can modify those guidelines without involving developers.\n\nThe review process becomes more inclusive too. When a new set of guidelines is proposed, business stakeholders can review them directly, understanding exactly how the agent will behave in different situations. They can even test these behaviors in a staging environment before approving changes for production.\n\nThis collaboration model extends to ongoing maintenance and improvement. Customer service managers monitoring interactions might notice opportunities for improvement. They can propose new guidelines or refinements based on real customer interactions, and these changes can be implemented without requiring deep technical involvement."
+    },
+    {
+      "id": "FnLkzPLtUT",
+      "version": "0.1.0",
+      "variants": [
+        "How do you debug when your agent isn't behaving as expected?"
+      ],
+      "answer": "Debugging AI agent behavior has traditionally been challenging because it's hard to understand why an agent made specific decisions. Parlant addresses this by making the decision-making process transparent and traceable.\n\nWhen your agent generates a response, Parlant records which guidelines were considered, how the agent interpreted them in-context, which ones were deemed relevant, and how they influenced the final response. This creates a clear trail you can follow to understand exactly why your agent behaved in a certain way.\n\nFor example, if your agent unexpectedly declines a refund request, you can trace its decision-making process: Did it check the order date? Which guidelines about refund eligibility were activated? Did any conflicting guidelines come into play? This visibility makes it much easier to identify whether the issue is with the guidelines themselves or with how they're being applied.\n\nThe debugging process becomes similar to debugging regular code - you can set up test cases, examine the decision flow, and identify exactly where behavior diverges from your expectations. This makes it possible to fix issues systematically rather than through haphazard trial and error."
+    },
+    {
+      "id": "Ysn5BJCLcz",
+      "version": "0.1.0",
+      "variants": [
+        "What's the typical development workflow when building an agent with Parlant?",
+        "\"How do I go from idea to deployed agent with Parlant?\"",
+        "\"What's the step-by-step process for developing a Parlant agent?\""
+      ],
+      "answer": "Building an agent with Parlant is designed to follow a natural progression that aligns with how organizations typically develop and refine their customer service processes. Let's walk through the typical workflow.\n\nYou begin by implementing your core business tools—these are the functions your agent needs to accomplish its tasks. For example, if you're building a customer service agent, you might create tools for checking order status, processing returns, or accessing customer information. These tools are just regular API calls or functions that encapsulate your business logic.\n\nOnce your tools are in place, you start with a basic set of guidelines that define fundamental behaviors. Think of this like training a new customer service representative on the essential protocols. You might begin with guidelines about how to greet customers, when to check their account status, or how to handle basic inquiries.\n\nThe key difference from traditional development becomes apparent in the testing phase. Instead of having to predict and script out every possible conversation flow, you can start with a minimal set of guidelines and observe how your agent handles real interactions. When you notice situations where the agent's behavior could be improved, you simply add or refine guidelines to address these specific cases.\n\nThis creates a highly iterative development process. You might deploy your agent to a test environment, observe its interactions, and continuously refine its behavior through new or updated guidelines. Because changes take effect immediately and can be tested in isolation, you can rapidly iterate based on feedback from stakeholders or actual usage patterns."
+    },
+    {
+      "id": "xP9Yq9GeZN",
+      "version": "0.1.0",
+      "variants": [
+        "How do you structure guidelines to keep them maintainable as they grow?"
+      ],
+      "answer": "When your agent starts handling more complex situations, guideline organization becomes crucial. Think of it like maintaining a large codebase - without proper structure, it can quickly become unmanageable.\n\nThe key is to make each guideline focused and specific rather than trying to handle multiple scenarios in one. Instead of a complex guideline that tries to handle all aspects of refund processing, you might have several smaller guidelines: one for determining refund eligibility, another for explaining policies, and a third for processing the actual refund.\n\nThis modular, decoupled approach makes it easier to review, update, and debug guidelines. When something needs to change, you can modify the specific guideline that handles that behavior without worrying about unintended effects on other parts of your agent's behavior."
+    },
+    {
+      "id": "FBGi8FoFle",
+      "version": "0.1.0",
+      "variants": [
+        "How do you handle conflicts between different business requirements?"
+      ],
+      "answer": "When different departments have competing requirements, the solution isn't to try to satisfy everyone in each interaction. Instead, use Parlant's context evaluation to determine which requirements take precedence in specific situations.\n\nFor example, your sales team might want the agent to be proactive about upgrade opportunities, while your support team prioritizes resolving current issues first. Instead of trying to combine these approaches, you can refine your guidelines to specify when each behavior is appropriate: \"Only discuss upgrades after the current support issue is resolved\" or \"Prioritize immediate problem resolution for customers marked as frustrated.\"\n\nThe key is to make these priority decisions explicit in your guidelines rather than hoping the agent will figure out the right balance. Parlant's engine will then consistently apply these priorities across all interactions."
+    },
+    {
+      "id": "ubVmrfInbj",
+      "version": "0.1.0",
+      "variants": [
+        "How do you handle inappropriate user interactions and prevent jailbreaks?"
+      ],
+      "answer": "When deploying customer-facing AI agents, we need to consider two distinct types of challenging interactions. First, there are users who might behave inappropriately – using hostile language, making inappropriate requests, raising sensitive issues, or attempting to manipulate the agent. Second, there are those who specifically try to \"jailbreak\" the agent – attempting to expose its underlying instructions or make it behave contrary to its guidelines.\n\nUnderstanding the technical challenge here is crucial. LLMs are fundamentally pattern-matching systems that can be influenced by the nature of inputs they receive. When a user engages aggressively or attempts manipulation, they're essentially trying to push the model into different behavioral patterns. This isn't just about maintaining decorum – inappropriate interactions can actually affect how the model generates subsequent responses, even with other users.\n\nParlant addresses this through a multi-layered approach. The first layer involves pre-processing filters that catch obviously inappropriate content before it reaches the agent. We integrate with services like OpenAI's moderation API to identify and filter out harmful content immediately.\n\nThe system also includes specific protections against common jailbreak attempts. When users try techniques like \"ignore previous instructions\" or \"let's play a game where you pretend to be unrestricted,\" Parlant's engine recognizes these patterns and ensures that core behavioral guidelines remain in effect.\n\nIt's important to note that these protections aren't about security in the traditional sense – that should always be handled at the infrastructure level through proper authentication, authorization, and API security measures. Instead, this is about maintaining consistent, appropriate agent behavior even in the face of challenging interactions."
+    },
+    {
+      "id": "rTEkYXdfQq",
+      "version": "0.1.0",
+      "variants": [
+        "How do you manage guidelines across different environments (development, staging, production)?",
+        "\"What's the best practice for testing guideline changes before production?\"",
+        "\"How do you handle guideline versioning in Parlant?\""
+      ],
+      "answer": "Parlant treats guidelines as code, which means you can use familiar development practices for managing them. Your guidelines are stored as JSON files, allowing you to use standard version control tools like Git to track changes, create branches for new features, and manage deployments across environments.\n\nA typical workflow might look like this: When developing new functionality, you create a branch in your repository and add or modify guidelines in your development environment. You can test these changes using Parlant's built-in chat interface, which lets you simulate conversations and verify that your guidelines produce the expected behavior.\n\nOnce you're satisfied with the changes in development, you can create a pull request to promote these changes to staging. Other team members can review the guideline changes just like they would review code changes. This is particularly valuable because it allows business stakeholders to verify that the guidelines accurately reflect their requirements before they reach production.\n\nThe JSON format of guidelines makes it easy to diff changes and understand exactly what's being modified. You can see which conditions are being added or updated, making it easier to reason about the impact of changes before they're deployed."
+    },
+    {
+      "id": "kpAoIBEbSa",
+      "version": "0.1.0",
+      "variants": [
+        "How does updating agent behavior differ in Parlant versus other frameworks?",
+        "\"How do I modify my agent's responses once it's deployed?\"",
+        "\"What's involved in changing how my agent handles specific situations?\""
+      ],
+      "answer": "In most frameworks, modifying agent behavior often requires changing prompts, updating training data, or revising conversation flows. These changes can have unpredictable effects because it's hard to ensure new instructions don't conflict with existing ones.\n\nParlant's approach is more systematic. When you want to change how your agent handles a situation, you modify or add specific guidelines. The engine automatically checks these changes for conflicts with existing guidelines before applying them. More importantly, because message generation in Parlant evaluates and selects relevant guidelines dynamically, you gets clear insights into why your agent made specific decisions, and adjust the configuration accordingly.\n\nFor example, if you notice your agent isn't being empathetic enough with frustrated customers, you don't need to modify a complex conversation tree or retrain a model. You can add a guideline about detecting customer frustration and specifying how to respond. Parlant will then automatically incorporate this guideline whenever it detects the relevant conditions, while also maintaining all other aspects of your agent's behavior."
+    },
+    {
+      "id": "ytogK0LNtM",
+      "version": "0.1.0",
+      "variants": [
+        "How do you handle complex decision trees in Parlant compared to graph-based frameworks?",
+        "\"How does Parlant manage complex conversation flows?\"",
+        "\"Do I need to map out all possible conversation paths in Parlant?\""
+      ],
+      "answer": "Traditional graph-based frameworks, such as LangGraph, require you to explicitly map out conversation flows, creating decision trees that cover every possible path a conversation might take. This becomes exponentially complex as your agent's capabilities grow, often resulting in rigid, hard-to-maintain systems.\n\nParlant approaches this challenge differently. Instead of pre-defining conversation paths, you define guidelines about how your agent should handle different situations. The engine then dynamically determines which guidelines apply based on the current context and any information it discovers along the way.\n\nConsider a technical support scenario. In a graph-based system, you might need to create branches for every possible combination of user problems, account types, and support tiers. With Parlant, you instead define guidelines like \"verify account status first\" or \"check recent support tickets before suggesting solutions.\" The agent can then navigate complex situations naturally while still following your business rules. This creates more flexible conversations while actually being easier to maintain and update."
+    },
+    {
+      "id": "GNGjzRoDwe",
+      "version": "0.1.0",
+      "variants": [
+        "How is building an agent in Parlant different from using LangChain?",
+        "\"If I'm already using LangChain, why would I switch to Parlant?\"",
+        "\"What can Parlant do that LangChain can't?\""
+      ],
+      "answer": "The fundamental difference lies in how these frameworks approach agent behavior. LangChain focuses on chaining together low-level LLM requests—you create sequences of steps like \"first search this document, then summarize the results, then generate a response.\" While this is powerful for building complex processing workflows, this rigid approach is creates mechanical, unnatural conversation experiences for customer-facing scenarios.\n\nLet's use a real example. Imagine you're building a support agent that needs to handle refund requests. In LangChain, you might create a chain that checks order status, retrieves refund policies, and generates a response. But ensuring the agent consistently applies your refund rules becomes increasingly complex as you add more conditions and edge cases. You end up building elaborate chains trying to account for every possible scenario.\n\nParlant approaches this differently. Instead of creating chains of operations, you refine the agent's behavior iteratively through pinpointed guidelines on how to handle different situations and circumstances. Parlant's structured guidance system is prebaked with a number of practical features, allowing you to easily tailor the behavior to specific customers, and to have the agents handle edge-cases reliably and consistently according to your instructions."
+    },
+    {
+      "id": "hNTUYJLQVT",
+      "version": "0.1.0",
+      "variants": [
+        "What makes Parlant different from just using OpenAI's API with function calling?",
+        "\"Why not just use function calling with GPT-4?\"",
+        "\"What does Parlant add on top of basic LLM APIs?\""
+      ],
+      "answer": "Regarding function calling, when you use OpenAI's API directly with function calling, you're essentially hoping the model will understand when and how to use your functions correctly based on your prompt. While you can get good results in simple scenarios, this approach leaves too much room for interpretation in practices, and thus faces several fundamental challenges as your agent's responsibilities grow.\n\nConsider what happens when you need your agent to follow complex business rules. With direct API usage, while you might include these rules in your system prompt, there's no mechanism to ensure the model actually follows them. The model might understand your rules perfectly but still choose to ignore them if it deems another response more helpful.\n\nParlant solves this by implementing an active control layer between your business logic and the LLM. Instead of hoping the model calls your functions appropriately, Parlant's engine actively manages when and how functions are called based on your guidelines. Using guidelines, you can even adjust the agent's behavior based on what it learns from each function call's output—something that would require complex prompt engineering and multiple API calls to achieve with direct API usage."
+    },
+    {
+      "id": "TEyVGpFWUl",
+      "version": "0.1.0",
+      "variants": [
+        "How does Parlant handle conversations differently from frameworks like LlamaIndex or similar RAG solutions?",
+        "\"What's the difference between Parlant's approach and typical RAG implementation?\"",
+        "\"How does Parlant compare to document-retrieval based agents?\""
+      ],
+      "answer": "Traditional RAG frameworks like LlamaIndex focus primarily on helping your agent find and use relevant information from your documents. While this is valuable, it addresses only part of the challenge of building reliable agents. Think of it like giving someone access to a great library—they can find information, but that doesn't ensure they'll use it appropriately.\n\nParlant takes a fundamentally different approach. Instead of just focusing on information retrieval, it actively manages how your agent uses any information it has access to. When your agent retrieves information—whether from documents, APIs, or databases—Parlant's engine evaluates this information against your guidelines to determine how it should be used.\n\nFor example, imagine a customer asking about product features. A typical RAG implementation would find relevant product documentation and generate a response based on it. Parlant goes further: it might find the same documentation, but then apply guidelines about how to approach the topic of premium features with free-tier customers, and ensure the response follows your specific communication protocols."
+    },
+    {
+      "id": "Ul23YsunwG",
+      "version": "0.1.0",
+      "variants": [
+        "How do you handle sensitive business logic across guidelines?"
+      ],
+      "answer": "Think of it like separation of concerns in software development. Your secure business logic lives in your own infrastructure, accessed through tools you control. Guidelines then specify the circumstances under which these tools should be used and how their results should be interpreted.\n\nFor example, if you're building a banking agent, instead of putting credit assessment rules in guidelines, you might have a guideline that says \"Before discussing loan options, check customer eligibility through the credit assessment tool.\" The actual credit assessment logic remains in your secure systems, while the guideline manages when and how to use this information."
+    },
+    {
+      "id": "1VtZheQ8Ua",
+      "version": "0.1.0",
+      "variants": [
+        "How do you test guidelines effectively?"
+      ],
+      "answer": "Testing guidelines requires a different approach from traditional software testing because we're dealing with natural language interactions. The key is to combine structured test cases with exploratory testing.\n\nStart with your core user journeys. Create test conversations that represent typical interactions, and verify that your agent handles them correctly. But don't stop there - also test edge cases and combinations of conditions. What happens when a premium customer asks about a basic feature? How does the agent handle a request that triggers multiple guidelines?\n\nParlant allows you to see which guidelines were activated and why, helping you verify that your agent's behavior aligns with your intentions. This makes it possible to catch potential issues before they affect real users.\n\nMost importantly, you can test changes in isolation. When adding new guidelines, you can verify they work as intended without worrying about breaking existing behavior, because Parlant automatically checks for conflicts."
+    }
+  ]
+}
