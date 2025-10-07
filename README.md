@@ -20,6 +20,22 @@
 
 A dynamic question-answering tool service that helps your Parlant agents provide accurate, traceable responses based on your FAQ data.
 
+### Changes Made
+Install additional dependencies:
+```
+pip install --no-cache-dir litellm datasets transformers
+pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+```
+
+Setup environment variables:
+```
+export OPENAI_API_KEY=your_openai_api_key
+
+export LITELLM_PROVIDER_BASE_URL="http://192.168.1.111:8880/v1"
+export LITELLM_PROVIDER_MODEL_NAME="openai/ibm-granite_granite-4.0-h-tiny"
+export LITELLM_PROVIDER_API_KEY="sk-1"
+```
+
 ### What is this?
 
 This tool service enables your Parlant agents to answer questions based on a managed set of questions and answers that you provide.

@@ -24,6 +24,7 @@ import aiofiles
 from parlant.adapters.db.json_file import JSONFileDocumentDatabase
 from parlant.adapters.db.transient import TransientDocumentDatabase
 from parlant.adapters.nlp.openai_service import OpenAIService
+from .litellm_service import LiteLLMService
 from parlant.core.background_tasks import BackgroundTaskService
 from parlant.core.common import DefaultBaseModel, Version, generate_id
 from parlant.core.contextual_correlator import ContextualCorrelator
@@ -746,7 +747,8 @@ async def create_persistent_app(
     )
 
     if not service:
-        service = OpenAIService(logger)
+        # service = OpenAIService(logger)
+        service = LiteLLMService(logger)
 
     async with JSONFileDocumentDatabase(
         logger=logger,

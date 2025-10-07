@@ -98,7 +98,7 @@ def main() -> None:
                 client=httpx.Client(
                     base_url=server,
                     follow_redirects=True,
-                    timeout=60,
+                    timeout=600,
                 ),
             )
 
