@@ -1,0 +1,11 @@
+services:
+  parlant-qna:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: parlant-qna
+    # Port is exposed to the host for CLI management, but not required for Open WebUI
+    ports:
+      - "8807:8807" 
+    restart: unless-stopped
+    command: parlant-qna serve --port 8807
