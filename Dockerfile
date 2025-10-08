@@ -12,5 +12,5 @@ RUN git clone https://github.com/limcheekin/parlant-qna.git .
 
 # Install the package and its dependencies from the cloned source
 RUN pip install .
-RUN pip install --no-cache-dir litellm datasets transformers
+RUN pip install --no-cache-dir parlant[litellm] datasets transformers
 RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
