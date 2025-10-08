@@ -31,9 +31,19 @@ Setup environment variables:
 ```
 export OPENAI_API_KEY=your_openai_api_key
 
+# Local AI
 export LITELLM_PROVIDER_BASE_URL="http://192.168.1.111:8880/v1"
 export LITELLM_PROVIDER_MODEL_NAME="openai/ibm-granite_granite-4.0-h-tiny"
 export LITELLM_PROVIDER_API_KEY="sk-1"
+
+# Modal
+export LITELLM_PROVIDER_BASE_URL="https://limcheekin--qwen3-14b-llama-server.modal.run/v1"
+export LITELLM_PROVIDER_MODEL_NAME="openai/qwen3-14b"
+
+# Gemini
+export LITELLM_PROVIDER_BASE_URL="https://generativelanguage.googleapis.com/v1beta/openai/"
+export LITELLM_PROVIDER_MODEL_NAME="openai/gemini-2.5-flash-lite"
+export LITELLM_PROVIDER_API_KEY="your_gemini_api_key"
 ```
 
 ### What is this?
